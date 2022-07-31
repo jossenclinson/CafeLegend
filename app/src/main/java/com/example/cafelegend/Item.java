@@ -9,16 +9,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class Item extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawerLayout;
     NavigationView navView;
     Toolbar toolbar;
-    TextView welcomeTV;
-    Bundle extras;
 
     void setDrawer(){
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
@@ -31,19 +28,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
     void init(){
-        drawerLayout = findViewById(R.id.drawerLayoutHome);
+        drawerLayout = findViewById(R.id.drawerLayoutItem);
         navView = findViewById(R.id.navView);
         toolbar = findViewById(R.id.toolbar);
-
-        welcomeTV = toolbar.findViewById(R.id.welcomeTV);
-        extras = getIntent().getExtras();
-        welcomeTV.setText("Welcome, " + extras.getString("username"));
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_item);
 
         init();
         setDrawer();
