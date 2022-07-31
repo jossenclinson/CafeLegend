@@ -61,10 +61,12 @@ public class MainActivity extends AppCompatActivity {
 
         init();
         eventBtn();
+
+        // Untuk test print
 //        Toast.makeText(this, "You clicked Find Us", Toast.LENGTH_SHORT).show();
 
-        // Untuk langsung direct ke halaman masing-masing
-        Intent intent = new Intent(this, Item.class);
-        startActivity(intent);
+        // Untuk langsung direct ke halaman yang klian inginkan
+//        Intent intent = new Intent(this, Item.class);
+//        startActivity(intent);
     }
 }
