@@ -19,10 +19,78 @@
             layout="@layout/toolbar"
             />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello Find Us!"
+            android:layout_gravity="center_horizontal"
+            android:text="Cafe Legend App"
+            android:textColor="@color/brownTitle"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Since 2022"
+            android:textColor="@color/brownTitle"
+            android:textSize="16dp"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Find Us"
+            android:textColor="@color/brownTitle"
+            android:textSize="34dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Samsan Tech"
+            android:textColor="@color/brownTitle"
+            android:textSize="18dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Best App Development Company"
+            android:textColor="@color/grey"
+            android:textSize="12dp"
+            android:layout_marginLeft="-5dp"
+            android:textStyle="italic"
+            />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Jl. Pakuan No.3, Sumur Batu, Babakan Madang, Bogor Regency, West Java 16810"
+            android:textColor="@color/brownTitle"
+            android:textSize="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="35dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="samsantech@gmail.com"
+            android:textColor="@color/brownTitle"
+            android:textSize="18dp"
+            android:layout_marginRight="-10dp"
+            android:layout_marginTop="30dp"
             />
     </LinearLayout>
 
