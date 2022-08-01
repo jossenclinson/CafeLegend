@@ -6,9 +6,10 @@
     tools:context=".FragmentMainCourse">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainCourseRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Main Course Fragment" />
+        />
 
 </FrameLayout>
