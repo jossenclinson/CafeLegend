@@ -20,10 +20,30 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="@string/item_menu"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:layout_marginVertical="20dp"
             />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/brown_700"
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/brown_700"
+            android:background="@color/brown_200"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2Item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
