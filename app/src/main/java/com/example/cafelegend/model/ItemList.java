@@ -9,6 +9,7 @@ public class ItemList {
         this.itemPrice = itemPrice;
     }
 
+
     public String getItemName() {
         return itemName;
     }
@@ -21,9 +22,7 @@ public class ItemList {
         return itemPrice;
     }
 
-    public void setFoodPrice(int itemPrice) {
+    public void setItemPrice(int itemPrice) {
         this.itemPrice = itemPrice;
     }
-
-
 }

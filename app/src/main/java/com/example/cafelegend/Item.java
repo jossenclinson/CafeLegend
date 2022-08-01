@@ -5,8 +5,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
@@ -15,8 +13,6 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.cafelegend.adapter.FragmentAdapter;
-import com.example.cafelegend.adapter.RvAdapter;
-import com.example.cafelegend.model.ItemList;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -33,11 +29,6 @@ public class Item extends AppCompatActivity implements NavigationView.OnNavigati
     ViewPager2 viewPager2;
     FragmentAdapter fragmentAdapter;
 
-    //Repeater
-    RecyclerView appetizerRV, mainCourseRV, beverageRV;
-    Vector<ItemList> appetizerVector, mainCourseVector, beverageVector;
-    RvAdapter adapter;
-
     void setDrawer(){
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.openDrawer, R.string.closeDrawer);
@@ -46,29 +37,6 @@ public class Item extends AppCompatActivity implements NavigationView.OnNavigati
 
         toggle.syncState();
         navView.setNavigationItemSelectedListener(this);
-    }
-
-    void loadDataRV(){
-        appetizerVector = new Vector<>();
-        appetizerVector.add(new ItemList("Gravlax", 34000));
-        appetizerVector.add(new ItemList("Korean Pancake", 23000));
-        appetizerVector.add(new ItemList("Mexican Queso Fundido", 30000));
-        appetizerVector.add(new ItemList("Malaysian Chicken Satay", 22000));
-        appetizerVector.add(new ItemList("Filipino Lumpia", 24500));
-
-        mainCourseVector = new Vector<>();
-        mainCourseVector.add(new ItemList("Rendang", 75000));
-        mainCourseVector.add(new ItemList("Sushi", 55000));
-        mainCourseVector.add(new ItemList("Ramen", 35000));
-        mainCourseVector.add(new ItemList("Tom Yam Goong", 59900));
-        mainCourseVector.add(new ItemList("Kebab", 42800));
-
-        beverageVector = new Vector<>();
-        beverageVector.add(new ItemList("Mango Lassi", 25000));
-        beverageVector.add(new ItemList("Pina Colada", 28000));
-        beverageVector.add(new ItemList("Cendol", 17000));
-        beverageVector.add(new ItemList("Chocolate Milkshake", 64000));
-        beverageVector.add(new ItemList("Eggnog", 65000));
     }
 
     void init(){
@@ -87,35 +55,9 @@ public class Item extends AppCompatActivity implements NavigationView.OnNavigati
         tabLayout.addTab(tabLayout.newTab().setText("Main Course"));
         tabLayout.addTab(tabLayout.newTab().setText("Beverage"));
 
-        //Repeater
-//        appetizerRV = findViewById(R.id.appetizerRV);
-//        mainCourseRV = findViewById(R.id.mainCourseRV);
-//        beverageRV = findViewById(R.id.beverageRV);
-//        loadDataRV();
-//        adapter = new RvAdapter(this);
-
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-//                switch (tab.getPosition()){
-//                    case 0:
-//                        adapter.setItemVector(appetizerVector);
-//                        appetizerRV.setAdapter(adapter);
-//                        appetizerRV.setLayoutManager(new GridLayoutManager(Item.this, 1));
-//                        break;
-//                    case 1:
-//                        adapter.setItemVector(mainCourseVector);
-//                        mainCourseRV.setAdapter(adapter);
-//                        mainCourseRV.setLayoutManager(new GridLayoutManager(Item.this, 1));
-//                        break;
-//                    case 2:
-//                        adapter.setItemVector(beverageVector);
-//                        beverageRV.setAdapter(adapter);
-//                        beverageRV.setLayoutManager(new GridLayoutManager(Item.this, 1));
-//                        break;
-//                }
-                Toast.makeText(Item.this, "Clicked " + tab.getPosition(), Toast.LENGTH_SHORT).show();
-
                 viewPager2.setCurrentItem(tab.getPosition());
             }
 

@@ -3,10 +3,17 @@ package com.example.cafelegend;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.cafelegend.adapter.RvAdapter;
+import com.example.cafelegend.model.ItemList;
+
+import java.util.Vector;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +21,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class FragmentMainCourse extends Fragment {
+    View view;
+    private RecyclerView mainCourseRV;
+    private Vector<ItemList> itemListVector;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,12 +63,24 @@ public class FragmentMainCourse extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        itemListVector = new Vector<>();
+        itemListVector.add(new ItemList("Rendang", 75000));
+        itemListVector.add(new ItemList("Sushi", 55000));
+        itemListVector.add(new ItemList("Ramen", 35000));
+        itemListVector.add(new ItemList("Tom Yam Goong", 59900));
+        itemListVector.add(new ItemList("Kebab", 42800));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_course, container, false);
+        view = inflater.inflate(R.layout.fragment_main_course, container, false);
+        mainCourseRV = view.findViewById(R.id.beverageRV);
+        RvAdapter adapter = new RvAdapter(getContext(), itemListVector);
+        mainCourseRV.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mainCourseRV.setAdapter(adapter);
+        return view;
     }
 }
