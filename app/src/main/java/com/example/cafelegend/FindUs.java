@@ -28,7 +28,7 @@ public class FindUs extends AppCompatActivity implements NavigationView.OnNaviga
     }
 
     void init(){
-        drawerLayout = findViewById(R.id.drawerLayoutItem);
+        drawerLayout = findViewById(R.id.drawerLayoutFindUs);
         navView = findViewById(R.id.navView);
         toolbar = findViewById(R.id.toolbar);
     }
@@ -36,7 +36,7 @@ public class FindUs extends AppCompatActivity implements NavigationView.OnNaviga
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item);
+        setContentView(R.layout.activity_find_us);
 
         init();
         setDrawer();

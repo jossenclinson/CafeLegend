@@ -79,7 +79,7 @@ public class Item extends AppCompatActivity implements NavigationView.OnNavigati
         Intent intent;
         switch (item.getItemId()){
             case R.id.item1:
-                intent = new Intent(this, Item.class);
+                intent = new Intent(this, Home.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;

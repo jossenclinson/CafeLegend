@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="Hello Find Us!"
             />
     </LinearLayout>
 
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:headerLayout="@layout/header_sidebar"
-        app:menu="@menu/menu_item"
+        app:menu="@menu/menu_find_us"
         android:layout_gravity="start"
         android:background="@color/sideBarWhiteColor"
         />
