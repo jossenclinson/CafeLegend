@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("username", usernameET.getText().toString());
                 intent.putExtra("password", passwordET.getText().toString());
                 startActivity(intent);
+                overridePendingTransition(R.anim.from_right, R.anim.to_left);
             }
         });
     }

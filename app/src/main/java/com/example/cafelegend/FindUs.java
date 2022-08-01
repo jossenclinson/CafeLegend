@@ -49,14 +49,17 @@ public class FindUs extends AppCompatActivity implements NavigationView.OnNaviga
             case R.id.item1:
                 intent = new Intent(this, Home.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item2:
                 intent = new Intent(this, Item.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item3:
                 intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
         }
         return false;
