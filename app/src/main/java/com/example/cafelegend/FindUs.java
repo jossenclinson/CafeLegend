@@ -16,6 +16,7 @@ public class FindUs extends AppCompatActivity implements NavigationView.OnNaviga
     DrawerLayout drawerLayout;
     NavigationView navView;
     Toolbar toolbar;
+    Bundle extras;
 
     void setDrawer(){
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
@@ -28,6 +29,7 @@ public class FindUs extends AppCompatActivity implements NavigationView.OnNaviga
     }
 
     void init(){
+        extras = getIntent().getExtras();
         drawerLayout = findViewById(R.id.drawerLayoutFindUs);
         navView = findViewById(R.id.navView);
         toolbar = findViewById(R.id.toolbar);
@@ -48,16 +50,19 @@ public class FindUs extends AppCompatActivity implements NavigationView.OnNaviga
         switch (item.getItemId()){
             case R.id.item1:
                 intent = new Intent(this, Home.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item2:
                 intent = new Intent(this, Item.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item3:
                 intent = new Intent(this, MainActivity.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;

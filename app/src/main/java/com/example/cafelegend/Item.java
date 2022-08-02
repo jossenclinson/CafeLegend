@@ -19,6 +19,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.Vector;
 
 public class Item extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    Bundle extras;
     //Side Navbar
     DrawerLayout drawerLayout;
     NavigationView navView;
@@ -40,6 +41,8 @@ public class Item extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
     void init(){
+        extras = getIntent().getExtras();
+
         //Side Navbar
         drawerLayout = findViewById(R.id.drawerLayoutItem);
         navView = findViewById(R.id.navView);
@@ -87,16 +90,19 @@ public class Item extends AppCompatActivity implements NavigationView.OnNavigati
         switch (item.getItemId()){
             case R.id.item1:
                 intent = new Intent(this, Home.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item2:
                 intent = new Intent(this, FindUs.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item3:
                 intent = new Intent(this, MainActivity.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;

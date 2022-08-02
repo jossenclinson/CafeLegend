@@ -55,16 +55,19 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         switch (item.getItemId()){
             case R.id.item1:
                 intent = new Intent(this, Item.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item2:
                 intent = new Intent(this, FindUs.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
             case R.id.item3:
                 intent = new Intent(this, MainActivity.class);
+                intent.putExtra("username", extras.getString("username"));
                 startActivity(intent);
                 overridePendingTransition(R.anim.from_right, R.anim.to_left);
                 return true;
