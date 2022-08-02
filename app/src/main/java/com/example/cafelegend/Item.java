@@ -20,6 +20,7 @@ import java.util.Vector;
 
 public class Item extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Bundle extras;
+
     //Side Navbar
     DrawerLayout drawerLayout;
     NavigationView navView;
