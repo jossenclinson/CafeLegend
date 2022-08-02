@@ -65,11 +65,11 @@ public class FragmentAppetizer extends Fragment {
         }
 
         itemListVector = new Vector<>();
-        itemListVector.add(new ItemList("Gravlax", 34000));
-        itemListVector.add(new ItemList("Korean Pancake", 23000));
-        itemListVector.add(new ItemList("Mexican Queso Fundido", 30000));
-        itemListVector.add(new ItemList("Malaysian Chicken Satay", 22000));
-        itemListVector.add(new ItemList("Filipino Lumpia", 24500));
+        itemListVector.add(new ItemList("Gravlax", "A Nordic dish made of cured salmon infused with fresh dill, vodka (optional) and seasonings. A good bagel goes well with this appetizing treat.",34000));
+        itemListVector.add(new ItemList("Korean Pancake", "These Korean pancakes are so so addictive! Don’t think they’re just some ordinary pancakes. These babies will take you on a culinary adventure. With seafood in the mix, this could be my breakfast.", 23000));
+        itemListVector.add(new ItemList("Mexican Queso Fundido", "Layers of ooey gooey melted cheese loaded with spicy chorizo sausage. How can you resist?!! For Cinco de Mayo, nothing could be more perfect. Serve it with red, white, and blue tortilla chips and they could be what your Fourth of July cookout needs.", 30000));
+        itemListVector.add(new ItemList("Malaysian Chicken Satay", "The best chicken satay you’ll ever have with its oriental flair and exotic flavors! The shallots, turmeric, and lemongrass mixture of seasonings will leave a taste in your mouth that will surely boost your appetite.", 22000));
+        itemListVector.add(new ItemList("Filipino Lumpia", "The Filipino version of spring rolls served with sweet and sour dipping sauce. If you can get your hand on some bean sprouts, throw some in the filling mixture for a truly out of this world experience. You might also want to take a look at these easy spring roll recipes which works as tasty appetizers!", 24500));
     }
 
     @Override

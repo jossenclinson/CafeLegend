@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 //        Toast.makeText(this, "You clicked Find Us", Toast.LENGTH_SHORT).show();
 
         // Untuk langsung direct ke halaman yang klian inginkan
-//        Intent intent = new Intent(this, Item.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, Item.class);
+        startActivity(intent);
     }
 }
