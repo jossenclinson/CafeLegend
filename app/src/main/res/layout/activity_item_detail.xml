@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/backgroundColor"
-    android:id="@+id/drawerLayoutItem"
     tools:context=".ItemDetail"
     >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
         <include
-            layout="@layout/toolbar"
+            layout="@layout/header_item_detail"
+            />
+
+        <ImageView
+            android:id="@+id/detailImageIV"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
             />
 
         <TextView
+            android:id="@+id/detailNameTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="Detail Name"
             />
-    </LinearLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:headerLayout="@layout/header_sidebar"
-        app:menu="@menu/menu_item"
-        android:layout_gravity="start"
-        android:background="@color/sideBarWhiteColor"
-        />
+        <TextView
+            android:id="@+id/detailPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Price"
+            />
 
-</androidx.drawerlayout.widget.DrawerLayout>
+        <TextView
+            android:id="@+id/detailDescTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Description"
+            />
+
+
+</LinearLayout>

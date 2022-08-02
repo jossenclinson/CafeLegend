@@ -65,11 +65,11 @@ public class FragmentMainCourse extends Fragment {
         }
 
         itemListVector = new Vector<>();
-        itemListVector.add(new ItemList("Rendang", "Often called \"the world's most delicious dish,\" Rendang is prepared by simmering beef with coconut milk with a mixture of the best of spices including turmeric, garlic, lemongrass, ginger, chillies, and galangal.", 75000));
-        itemListVector.add(new ItemList("Sushi", "Prepared with vinegared rice and a wide range of ingredients including seafood, vegetables, and sometimes fruits. Sushi tastes best when served with wasabi, pickled ginger, and soy sauce.", 55000));
-        itemListVector.add(new ItemList("Ramen", "If not tried, you must have heard of Ramen at least once in your life. However, we are not talking about the packaged instant noodles. Ramen is a Japanese dish made of wheat noodles and served in the broth along with vegetables and meat.", 35000));
-        itemListVector.add(new ItemList("Tom Yam Goong", "A type of sour and hot Thai soup, Tom yam goong is prepared with shrimp along with a load of healthy herbs and spices?  lemongrass, lime, kaffir leaves, galangal, and red chili peppers to name a few.", 59900));
-        itemListVector.add(new ItemList("Kebab", "A dish popular across the Middle East, Kebabs are originally from Turkey. They consist of ground meat or seafood, fruits, and vegetables in some cases and are cooked on a skewer with a big fire underneath, just like a barbeque on the grill.", 42800));
+        itemListVector.add(new ItemList("Rendang", "Often called \"the world's most delicious dish,\" Rendang is prepared by simmering beef with coconut milk with a mixture of the best of spices including turmeric, garlic, lemongrass, ginger, chillies, and galangal.", 75000, R.drawable.p5));
+        itemListVector.add(new ItemList("Sushi", "Prepared with vinegared rice and a wide range of ingredients including seafood, vegetables, and sometimes fruits. Sushi tastes best when served with wasabi, pickled ginger, and soy sauce.", 55000, R.drawable.p6));
+        itemListVector.add(new ItemList("Ramen", "If not tried, you must have heard of Ramen at least once in your life. However, we are not talking about the packaged instant noodles. Ramen is a Japanese dish made of wheat noodles and served in the broth along with vegetables and meat.", 35000, R.drawable.p7));
+        itemListVector.add(new ItemList("Tom Yam Goong", "A type of sour and hot Thai soup, Tom yam goong is prepared with shrimp along with a load of healthy herbs and spices?  lemongrass, lime, kaffir leaves, galangal, and red chili peppers to name a few.", 59900, R.drawable.p8));
+        itemListVector.add(new ItemList("Kebab", "A dish popular across the Middle East, Kebabs are originally from Turkey. They consist of ground meat or seafood, fruits, and vegetables in some cases and are cooked on a skewer with a big fire underneath, just like a barbeque on the grill.", 42800, R.drawable.p9));
     }
 
     @Override

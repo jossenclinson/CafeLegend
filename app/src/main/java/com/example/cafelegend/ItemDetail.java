@@ -1,64 +1,45 @@
 package com.example.cafelegend;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class ItemDetail extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    DrawerLayout drawerLayout;
-    NavigationView navView;
-    Toolbar toolbar;
-
-    void setDrawer(){
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
-                R.string.openDrawer, R.string.closeDrawer);
-
-        drawerLayout.addDrawerListener(toggle);
-
-        toggle.syncState();
-        navView.setNavigationItemSelectedListener(this);
-    }
+public class ItemDetail extends AppCompatActivity {
+    ImageView backItemIV, detailImageIV;
+    TextView detailNameTV, detailPriceTV, detailDescTV;
+    Bundle extras;
 
     void init(){
-        drawerLayout = findViewById(R.id.drawerLayoutItem);
-        navView = findViewById(R.id.navView);
-        toolbar = findViewById(R.id.toolbar);
+        backItemIV = findViewById(R.id.backItemIV);
+
+        detailImageIV = findViewById(R.id.detailImageIV);
+        detailNameTV = findViewById(R.id.detailNameTV);
+        detailPriceTV = findViewById(R.id.detailPriceTV);
+        detailDescTV = findViewById(R.id.detailDescTV);
+
+        extras = getIntent().getExtras();
+        detailImageIV.setImageResource(extras.getInt("detailImage"));
+        detailNameTV.setText(extras.getString("detailName"));
+        detailPriceTV.setText("IDR " + extras.getInt("detailPrice"));
+        detailDescTV.setText(extras.getString("detailDesc"));
+    }
+
+    void eventBtn(){
+        backItemIV.setOnClickListener(x -> {
+            finish();
+        });
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item);
+        setContentView(R.layout.activity_item_detail);
 
         init();
-        setDrawer();
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Intent intent;
-        switch (item.getItemId()){
-            case R.id.item1:
-                intent = new Intent(this, Item.class);
-                startActivity(intent);
-                return true;
-            case R.id.item2:
-                intent = new Intent(this, FindUs.class);
-                startActivity(intent);
-                return true;
-            case R.id.item3:
-                intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
-                return true;
-        }
-        return false;
+        eventBtn();
     }
 }
