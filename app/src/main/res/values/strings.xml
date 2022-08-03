@@ -17,4 +17,11 @@
     <string name="item_name">Item Name</string>
     <string name="item_price">Item Price</string>
     <string name="more_detail"><u>More Detail</u></string>
+    <string name="cafe_legend_app">Cafe Legend App</string>
+    <string name="since_2022">Since 2022</string>
+    <string name="find_us_street">Jl. Pakuan No.3, Sumur Batu, Babakan Madang, Bogor Regency, West Java 16810</string>
+    <string name="find_us_email">samsantech@gmail.com</string>
+    <string name="best_app_development_company">Best App Development Company</string>
+    <string name="samsan_tech">Samsan Tech</string>
+    <string name="find_us">Find Us</string>
 </resources>
