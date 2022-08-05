@@ -1,6 +1,5 @@
 package com.example.cafelegend.adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cafelegend.Item;
 import com.example.cafelegend.ItemDetail;
 import com.example.cafelegend.R;
 import com.example.cafelegend.model.ItemList;
@@ -23,7 +21,6 @@ import java.util.Vector;
 public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder>{
     Context context;
     Vector<ItemList> itemListVector;
-    Dialog dialog;
 
     public RvAdapter(Context context, Vector<ItemList> itemListVector){
         this.context = context;
