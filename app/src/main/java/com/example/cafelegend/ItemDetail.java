@@ -51,6 +51,8 @@ public class ItemDetail extends AppCompatActivity {
                 Integer quantity = Integer.parseInt(quantityET.getText().toString());
                 if (quantity <= 0) {
                     alert("Quantity must be greater than 0");
+                }else{
+
                 }
             }
         });
