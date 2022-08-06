@@ -52,7 +52,7 @@ public class ItemDetail extends AppCompatActivity {
                 if (quantity <= 0) {
                     alert("Quantity must be greater than 0");
                 }else{
-
+                    finish();
                 }
             }
         });
