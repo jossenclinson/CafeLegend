@@ -12,10 +12,22 @@
             layout="@layout/header_item_detail"
             />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Detail"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:layout_marginVertical="20dp"
+            android:textStyle="bold|italic"
+            />
+
         <ImageView
             android:id="@+id/detailImageIV"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="275dp"
+            android:scaleType="fitXY"
             android:src="@drawable/logo"
             />
 
@@ -23,22 +35,59 @@
             android:id="@+id/detailNameTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
             android:text="Detail Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
             />
 
-        <TextView
-            android:id="@+id/detailPriceTV"
-            android:layout_width="wrap_content"
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Detail Price"
-            />
+            >
+                <TextView
+                    android:id="@+id/detailPriceTV"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Detail Price"
+                    />
+
+                <EditText
+                    android:id="@+id/quantityET"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Quantity"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    />
+
+        </GridLayout>
 
         <TextView
             android:id="@+id/detailDescTV"
-            android:layout_width="wrap_content"
+            android:layout_width="362dp"
             android:layout_height="wrap_content"
-            android:text="Detail Description"
-            />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Detail Description" />
+
+        <Button
+            android:id="@+id/buyBtn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/loginBtn"
+            android:text="BUY" />
 
 
 </LinearLayout>
+

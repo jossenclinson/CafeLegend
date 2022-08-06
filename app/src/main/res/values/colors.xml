@@ -18,4 +18,5 @@
     <color name="sideBarBrownColor">#C28D4B</color>
     <color name="sideBarWhiteColor">#EAD8C1</color>
     <color name="grey">#797979</color>
+    <color name="grey_30">#40797979</color>
 </resources>
