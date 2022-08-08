@@ -21,6 +21,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     Toolbar toolbar;
     TextView welcomeTV;
     Bundle extras;
+    ImageView carouselBackIV, carouselNextIV;
     ViewFlipper vf_flipper, vf_food1, vf_food2, vf_drink1, vf_drink2;
 
     void setDrawer(){
@@ -42,12 +43,29 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         extras = getIntent().getExtras();
         welcomeTV.setText("Welcome, " + extras.getString("username"));
 
+        carouselBackIV = findViewById(R.id.carouselBackIV);
+        carouselNextIV = findViewById(R.id.carouselNextIV);
+
         vf_flipper = findViewById(R.id.vf_flipper);
         vf_food1 = findViewById(R.id.vf_food1);
         vf_food2 = findViewById(R.id.vf_food2);
         vf_drink1 = findViewById(R.id.vf_drink1);
         vf_drink2 = findViewById(R.id.vf_drink2);
 
+    }
+
+    void setEvent(){
+        carouselBackIV.setOnClickListener(x -> {
+            vf_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+            vf_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
+            vf_flipper.showPrevious();
+        });
+
+        carouselNextIV.setOnClickListener(x -> {
+            vf_flipper.setInAnimation(this, R.anim.slide_in_right);
+            vf_flipper.setOutAnimation(this, R.anim.slide_out_left);
+            vf_flipper.showNext();
+        });
     }
 
     @Override
@@ -82,6 +100,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         for(int drink2Img: drink2){
             flipperDrink2(drink2Img);
         }
+        setEvent();
 
     }
 
@@ -91,10 +110,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         vf_flipper.addView(imageView);
         vf_flipper.setFlipInterval(5000);
-        vf_flipper.setAutoStart(true);
+        vf_flipper.setAutoStart(false);
 
-        vf_flipper.setInAnimation(this, android.R.anim.slide_in_left);
-        vf_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
+        vf_flipper.setInAnimation(this, R.anim.slide_in_right);
+        vf_flipper.setOutAnimation(this, R.anim.slide_out_left);
+        vf_flipper.startFlipping();
 
     }
 
