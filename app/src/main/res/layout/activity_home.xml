@@ -19,11 +19,69 @@
             layout="@layout/toolbar"
             />
 
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="30dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/vf_flipper"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            />
+            android:text="Recommendation Foods"
+            android:textColor="@color/brown_500"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ViewFlipper
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/vf_food1"/>
+
+            <ViewFlipper
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/vf_food2"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommendation Drinks"
+            android:textColor="@color/brown_500"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ViewFlipper
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/vf_drink1"/>
+
+            <ViewFlipper
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/vf_drink2"/>
+        </LinearLayout>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
