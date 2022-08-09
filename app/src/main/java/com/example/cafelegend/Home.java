@@ -73,11 +73,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        int images[] = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide3};
-        int food1[] = {R.drawable.kebab, R.drawable.ramen, R.drawable.filipino_lumpia, R.drawable.korean_pancake};
-        int food2[] = {R.drawable.sushi, R.drawable.rendang, R.drawable.tomyam_goong, R.drawable.gravlax};
-        int drink1[] = {R.drawable.pina_colada, R.drawable.mango_lassi, R.drawable.cendol, R.drawable.eggnog};
-        int drink2[] = {R.drawable.avocado_juice, R.drawable.coffe_latte, R.drawable.ice_tea, R.drawable.chocolate_milkshake};
+        int[] images = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide3};
+        int[] food1 = {R.drawable.kebab, R.drawable.ramen, R.drawable.filipino_lumpia, R.drawable.korean_pancake};
+        int[] food2 = {R.drawable.sushi, R.drawable.rendang, R.drawable.tomyam_goong, R.drawable.gravlax};
+        int[] drink1 = {R.drawable.pina_colada, R.drawable.mango_lassi, R.drawable.cendol, R.drawable.eggnog};
+        int[] drink2 = {R.drawable.avocado_juice, R.drawable.coffe_latte, R.drawable.ice_tea, R.drawable.chocolate_milkshake};
         init();
         setDrawer();
 
