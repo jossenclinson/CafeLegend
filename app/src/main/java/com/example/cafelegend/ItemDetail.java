@@ -52,7 +52,7 @@ public class ItemDetail extends AppCompatActivity {
                 if (quantity <= 0) {
                     alert("Quantity must be greater than 0");
                 }else{
-                    finish();
+                    success("Success Buy " + extras.getString("detailName"));
                 }
             }
         });
@@ -76,6 +76,21 @@ public class ItemDetail extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
+                    }
+                })
+                .create();
+        alertDialog.show();
+    }
+
+    private void success(String message){
+        AlertDialog alertDialog = new AlertDialog.Builder(ItemDetail.this)
+                .setTitle("Success")
+                .setMessage(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        finish();
                     }
                 })
                 .create();
